@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+    <style>
+    body{
+      background: #fdeec8;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    #expresion{
+      height: 80px;
+
+    }
+    #expresion div{
+      border: 1px solid #bcbcbc;
+      padding: 10px;
+      font-weight: bold;
+      width: 100px;
+      display: inline-block;
+      text-align: center;
+      margin-top: 0;
+    }
+    #expresion div.operador{
+      width: 20px;
+    }
+
+    .table.table-responsive{
+      border: 2px solid #ccc;
+
+
+    }
+    .table.table-responsive button{
+      height: 60px;
+      width: 60px;
+      background: #e5e5e5;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 3px #747474;
+      font-size: 210%;
+      text-align: center;
+      font-weight: bold;
+      margin: 0;
+      padding: 10px !important;
+    }
+     .display{
+      background: #f5f5f5 !important;
+      border: 2px solid #ccc !important;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+    <div class="row" style="margin-top: 8%;">
+      
+        <h4>Calculadora</h4><hr>
+
+   
+    </div>
+    <div class="row">
+      <div id="expresion">    
+       <div> OP1</div> 
+       <div class="operador">OP</div> 
+       <div> OP2</div> 
+       <div class="operador">=</div> 
+       <div> RES </div> 
+      </div>
+       
+    </div>
+    <div class="row">
+
+        
+        <table class="table table-responsive table-bordered">
+          <tr>
+            <td colspan="3" class="display" id="visor"></td>
+            
+            <td class="igual"><button value="=" onclick="igualar()">=</button></td>
+          </tr>
+          <tr>
+            <td><button value="7" onclick="numero('7')">7</button></td>
+            <td><button value="8" onclick="numero('8')">8</button></td>
+            <td><button value="9" onclick="numero('9')">9</button></td>
+            <td><button value="+" onclick="operar('+')">+</button></td>
+          </tr>
+          <tr>
+            <td><button value="4" onclick="numero('4')">4</button></td>
+            <td><button value="5" onclick="numero('5')">5</button></td>
+            <td><button value="6" onclick="numero('6')">6</button></td>
+            <td><button value="-" onclick="operar('-')">-</button></td>
+          </tr>
+          <tr>
+            <td><button value="1" onclick="numero('1')">1</button></td>
+            <td><button value="2" onclick="numero('2')">2</button></td>
+            <td><button value="3" onclick="numero('3')">3</button></td>
+            <td><button value="x" onclick="operar('*')">×</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="borrar()">C</button></td>
+            <td><button value="0" onclick="numero('0')">0</button></td>
+            <td><button value="." onclick="numero('.')">.</button></td>
+            <td><button value="/" onclick="operar('/')">÷</button></td>
+          </tr>
+
+        </table>
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body>
+</html>
